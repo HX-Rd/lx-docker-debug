@@ -22,6 +22,7 @@ then
     apt-get install git -y
     apt-get install vim -y
     apt-get install powershell -y
+    apt-get unzip -y
 fi
 
 
