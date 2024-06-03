@@ -13,15 +13,15 @@ fi
 
 if [ $distro == "centos" ]
 then
-    sudo yum install git -y
-    sudo yum install vim -y
+    yum install git -y
+    yum install vim -y
 fi
 if [ $distro == "ubuntu" ]
 then
-    sudo apt-get update
-    sudo apt-get install git -y
-    sudo apt-get install vim -y
-    sudo apt-get install powershell -y
+    apt-get update
+    apt-get install git -y
+    apt-get install vim -y
+    apt-get install powershell -y
 fi
 
 
