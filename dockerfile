@@ -29,7 +29,7 @@ RUN export VISUAL=vim
 RUN export EDITOR="$VISUAL"
 
 
-RUN curl -k -Ss https://raw.githubusercontent.com/HX-Rd/lx-docker-debug/master/install.sh >> install.sh ; chmod +x install.sh ; /root/install.sh ; source /root/.bashrc
+RUN sudo curl -k -Ss https://raw.githubusercontent.com/HX-Rd/lx-docker-debug/master/install.sh >> install.sh ; chmod +x install.sh ; /root/install.sh ; source /root/.bashrc
 
 # Set the default command to run when the container starts
 CMD ["bash"]
