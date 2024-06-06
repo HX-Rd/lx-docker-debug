@@ -24,9 +24,9 @@ RUN apt-get install -y \
     apt-transport-https \
     software-properties-common 
 
-RUN mkdir -p /opt/microsoft/powershell/7 \
-    tar zxf /tmp/powershell.tar.gz -C /opt/microsoft/powershell/7 \
-    chmod +x /opt/microsoft/powershell/7/pwsh \
+RUN mkdir -p /opt/microsoft/powershell/7 && \
+    tar zxf /tmp/powershell.tar.gz -C /opt/microsoft/powershell/7 && \
+    chmod +x /opt/microsoft/powershell/7/pwsh && \
     ln -s /opt/microsoft/powershell/7/pwsh /usr/bin/pwsh 
 
 RUN git config --global user.name HX-Rd
