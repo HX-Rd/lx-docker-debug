@@ -8,10 +8,17 @@ LABEL maintainer="git@euphoricmail.com"
 RUN apt-get update && apt-get upgrade -y
 
 # Optional: Install any additional packages you need
-RUN apt-get install -y vim
-RUN apt-get install -y git-core
-RUN apt-get install -y git
-RUN apt-get install -y curl
+RUN apt-get install -y \
+    vim \
+    git-core \
+    git \
+    curl \
+    tcpdump \
+    iproute2 \
+    iputils-ping \
+    net-tools \
+    dnsutils \
+    curl
 
 RUN git config --global user.name HX-Rd
 
