@@ -43,10 +43,9 @@ RUN cd /root && \
     rm -rf /root/lx-docker-debug && \
     sh /root/.vim_runtime/bin/install 
 
-RUN mkdir /root/lx-docker-debug \
-    git clone https://github.com/HX-Rd/lx-docker-debug.git /root/lx-docker-debug \
-    find /root/lx-docker-debug/ -type f -iname "*.sh" -exec chmod +x {} \; \
-    /root/lx-docker-debug/setup.sh
+RUN mkdir /root/lx-docker-debug && \
+    git clone https://github.com/HX-Rd/lx-docker-debug.git /root/lx-docker-debug && \
+    find /root/lx-docker-debug/ -type f -iname "*.sh" -exec chmod +x {} \; 
 
 RUN curl -s https://ohmyposh.dev/install.sh | bash -s
 
