@@ -51,33 +51,6 @@ RUN curl -s https://ohmyposh.dev/install.sh | bash -s
 
 RUN rm -rf /root/lx-docker-debug
 
-RUN files=$(\ls -a $HOME/lx-pref) \
-    backup_folder=$HOME/env-backup \
-    mkdir root/env-backup \
-    blacklist=( \
-        '.' \
-        '..' \
-        '.git' \
-        'setup.sh' \
-        'install.sh' \
-        'scripts' \
-    ) \
-    for file in $files \
-    do \
-        if [ -f $HOME/$file ] || [ -d $HOME/$file ] \
-        then \
-            if [[ ! " ${blacklist[@]} " =~ " ${file} " ]] \
-            then \
-                mv /root/$file $backup_folder/$file \
-            fi \
-        fi \
-        if [[ ! " ${blacklist[@]} " =~ " ${file} " ]] \
-        then \
-            mv /root/lx-docker-debug/$file /root/$file \
-    fi \
-    done \
-    echo "Done setting up environment"
-
 RUN export VISUAL=vim
 RUN export EDITOR="$VISUAL"
 
